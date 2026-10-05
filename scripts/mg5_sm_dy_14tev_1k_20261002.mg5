@@ -1,0 +1,15 @@
+import model sm
+define l+ = e+ mu+
+define l- = e- mu-
+generate p p > l+ l-
+output events/sm_dy_14tev_1k_20261002_compile
+launch events/sm_dy_14tev_1k_20261002_compile
+done
+set nevents 1000
+set ebeam1 7000
+set ebeam2 7000
+set iseed 12345
+set pdlabel cteq6l1
+set mmll 40
+set use_syst False
+done

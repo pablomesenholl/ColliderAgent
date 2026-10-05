@@ -30,6 +30,7 @@ def _compile(
     print(f"CPU cores (sched_getaffinity): {nb_core}")
 
     lines = [
+        "set auto_update 0",
         f"set nb_core {nb_core}",
         f"import model {model_ref}",
     ]

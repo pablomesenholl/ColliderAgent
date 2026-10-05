@@ -184,6 +184,9 @@ def _launch(
     else:
         script = f"set nb_core {nb_core}\nlaunch {process_dir}\n{launch_commands}\n"
 
+    # Launch can reload configuration; disable updates again before MG5 exits.
+    script = "set auto_update 0\n" + script + "set auto_update 0\n"
+
     script_filename = "launch.mg5"
     with open(script_filename, "w") as file_pointer:
         file_pointer.write(script)

@@ -63,8 +63,9 @@ code: |
       submit_job(
           task_name="[Blueprint] MadGraph Launch",
           description=description,
-          namespace="HET-AGI",
+          namespace="pablomesenholl",
           repo_name="ColliderAgent",
+          branch="main",
           commit_sha="HEAD",
           system_entry_command=system_entry_command,
           entry_command=entry_command,

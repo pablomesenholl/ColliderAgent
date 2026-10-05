@@ -84,7 +84,7 @@ code: |
           commit_sha="HEAD",
           system_entry_command=system_entry_command,
           entry_command=entry_command,
-          container_image="docker://git.pku.edu.cn/het-agi/collider:latest",
+          container_image="docker://collideragent/collider:mg5-3.7.0-fixed",
           job_type=JobType.A2,
           runner="magnus",
           cpu_count=10,

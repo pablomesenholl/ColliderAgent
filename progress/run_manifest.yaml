@@ -1,0 +1,13 @@
+- label: dy_ll_14tev_50k
+  timestamp: '2026-10-05T15:12:55.992556+00:00'
+  task: Plot SM parton-level pp to e+e- and mu+mu- at 14 TeV; stop on any failure
+  steps:
+    madgraph: failed
+- label: dy_ll_14tev_50k_run2
+  timestamp: '2026-10-05T15:30:05.690588+00:00'
+  task: Plot SM parton-level dilepton mass at 14 TeV
+  steps:
+    madgraph: success
+    madanalysis: 'skipped: direct LHE invariant-mass analysis'
+    postprocessing: success
+    summary: success

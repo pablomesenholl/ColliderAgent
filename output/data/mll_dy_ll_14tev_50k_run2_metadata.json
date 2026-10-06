@@ -1,0 +1,28 @@
+{
+  "events": 50000,
+  "electron_events": 24840,
+  "muon_events": 25160,
+  "cross_section_pb": 1420.489,
+  "integration_error_pb": 1.331787,
+  "idwtup": -4,
+  "event_weight_pb": 0.02840978,
+  "normalization": "sigma/N_actual; positive constant LHE cross-section weights verified",
+  "uncertainty": "sqrt(bin_count)*sigma/N/bin_width; integration uncertainty not included",
+  "mass_min_GeV": 50.00600032127515,
+  "mass_max_GeV": 780.2301694993114,
+  "underflow": 0,
+  "overflow_above_200": 82,
+  "visible_events": 49918,
+  "settings": {
+    "nevents": "50000",
+    "ebeam1": "7000.0",
+    "ebeam2": "7000.0",
+    "pdlabel": "nn23lo1",
+    "ptl": "10.0",
+    "etal": "2.5",
+    "mmll": "50.0"
+  },
+  "lhe": "events/dy_ll_14tev_50k_run2/Events/run_01/unweighted_events.lhe.gz",
+  "banner": "events/dy_ll_14tev_50k_run2/Events/run_01/run_01_tag_1_banner.txt",
+  "lhe_sha256": "ae0033b71b42ad60b4e20219733e0463f05f4c55edb88a4bcd482921086c80ef"
+}

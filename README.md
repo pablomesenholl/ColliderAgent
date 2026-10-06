@@ -101,10 +101,17 @@ Enter your server URL and API key when prompted. All subsequent commands are rou
 Start the local backend:
 
 ```bash
-magnus local start
+.venv/bin/python scripts/setup_magnus.py --start-local
 ```
 
 This fetches the Magnus source, installs backend dependencies, starts the server on port `8017`, and creates a local database and user account. If Node.js is installed, a Web UI is also launched at `http://localhost:3011`.
+
+The setup command then registers and verifies this repository's MadGraph and
+MadAnalysis blueprints, including the fork and repaired container references.
+Use it for subsequent starts too: plain `magnus local start` registers Magnus's
+bundled definitions and can overwrite these references. To update an already
+running station, run `.venv/bin/python scripts/setup_magnus.py`; to verify without
+changing it, add `--check`. These commands use your active Magnus station.
 
 Verify the setup:
 

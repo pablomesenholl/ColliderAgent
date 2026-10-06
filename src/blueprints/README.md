@@ -1,6 +1,6 @@
 # ColliderAgent — Blueprints
 
-**Magnus blueprint definitions, synced from the active Magnus station.**
+**Repository blueprint definitions to register on the active Magnus station.**
 
 Each `.yaml` file is a self-contained blueprint that can be registered with Magnus via:
 
@@ -22,6 +22,21 @@ magnus blueprint save <id> --file src/blueprints/<id>.yaml
 | `micromegas-calc.yaml` | `micromegas-calc` | Execute the compiled `./main`, capture `results.json` |
 
 ## Syncing
+
+For the collider pipeline, apply and verify all four repository definitions:
+
+```bash
+.venv/bin/python scripts/setup_magnus.py
+.venv/bin/python scripts/setup_magnus.py --check
+```
+
+For local startup, use `.venv/bin/python scripts/setup_magnus.py --start-local`.
+Magnus startup registers its bundled blueprints; the wrapper applies our
+definitions afterwards so their repository and image references take precedence.
+It updates `madgraph-compile`, `madgraph-compile-no-update`, `madgraph-launch`,
+and `madanalysis-process`. A mismatch or API failure stops the command.
+The referenced runner changes must also be pushed to the configured Git branch;
+registration does not upload local runner files.
 
 To pull the latest blueprint from a Magnus station:
 
